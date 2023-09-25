@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fondo">#FEFCF5</color>
     <color name="primario">#453B2B</color>
+    <color name="fondoAlarmaCard">#CDA66C</color>
 </resources>

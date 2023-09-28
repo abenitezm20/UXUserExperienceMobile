@@ -52,9 +52,7 @@ class EliminarAlarmaAdapter : RecyclerView.Adapter<EliminarAlarmaAdapter.ViewHol
     }
 
     fun eliminarAlarma(posicion: Int) {
-        Log.d("ACA", "llegue a Borrar")
         AlarmasManager.borrarElemento(posicion)
-        //this.notifyItemInserted(AlarmasManager.obtenerLista().size - 1)
         this.notifyItemRemoved(posicion)
     }
 

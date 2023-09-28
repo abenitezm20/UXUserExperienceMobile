@@ -193,11 +193,11 @@
         android:id="@+id/botonGuardarAlarma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         android:text="Guardar"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alarmaError"/>
+        app:layout_constraintTop_toBottomOf="@+id/alarmaError" />
 
     <ImageView
         android:id="@+id/botonAtrasCrear"

@@ -33,6 +33,7 @@ object AlarmasManager {
     }
 
     fun borrarElemento(indice: Int): Boolean {
+        //var indice = obtenerIndice(alarma)
         return if (indice >= 0 && indice < listaAlarmas.size) {
             listaAlarmas.removeAt(indice)
             true
@@ -47,6 +48,20 @@ object AlarmasManager {
 
     fun yaExiste(etiqueta: String) : Boolean {
         return listaAlarmas.any{it.etiqueta == etiqueta}
+    }
+
+    fun obtenerIndice(alarma: Alarmas): Int {
+        var indice: Int
+        if(alarma.etiqueta == "Despertar"){
+            indice = 0
+        }
+        else if (alarma.etiqueta == "Museo del Oro"){
+            indice = 1
+        }
+        else {
+            indice = 2
+        }
+        return indice
     }
 
 }

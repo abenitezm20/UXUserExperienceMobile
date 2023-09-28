@@ -8,8 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
-class AlarmaAdapter: RecyclerView.Adapter<AlarmaAdapter.ViewHolder>() {
+class EliminarAlarmaAdapter : RecyclerView.Adapter<EliminarAlarmaAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.alarma_card_layout, parent, false)
@@ -22,7 +21,7 @@ class AlarmaAdapter: RecyclerView.Adapter<AlarmaAdapter.ViewHolder>() {
             holder.etiqueta.text = alarma.etiqueta
             holder.hora.text = alarma.hora
             holder.dias.text = alarma.dias
-            holder.opcionEliminar.visibility = View.INVISIBLE
+            holder.opcionEliminar.visibility = View.VISIBLE
         }
         holder.itemView.setOnClickListener(View.OnClickListener { onClickListener(alarma, position) })
     }
@@ -30,6 +29,7 @@ class AlarmaAdapter: RecyclerView.Adapter<AlarmaAdapter.ViewHolder>() {
     private fun onClickListener(alarma: Alarmas?, position: Int) {
         if (alarma != null) {
             Log.d("ACA", alarma.etiqueta)
+            eliminarAlarma(position)
         }
     }
 
@@ -51,10 +51,11 @@ class AlarmaAdapter: RecyclerView.Adapter<AlarmaAdapter.ViewHolder>() {
         }
     }
 
-
-    fun agregarAlarma(alarma: Alarmas) {
-        AlarmasManager.agregarAlarma(alarma)
-        this.notifyItemInserted(AlarmasManager.obtenerLista().size - 1)
+    fun eliminarAlarma(posicion: Int) {
+        Log.d("ACA", "llegue a Borrar")
+        AlarmasManager.borrarElemento(posicion)
+        //this.notifyItemInserted(AlarmasManager.obtenerLista().size - 1)
+        this.notifyItemRemoved(posicion)
     }
 
 }

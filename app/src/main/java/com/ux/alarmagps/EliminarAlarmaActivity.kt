@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class EliminarAlarmaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +18,12 @@ class EliminarAlarmaActivity : AppCompatActivity() {
             val intent = Intent(this@EliminarAlarmaActivity, MainActivity::class.java)
             startActivity(intent)
         })
+
+        val recyclerView = findViewById<RecyclerView>(R.id.listaAlarmasDel)
+        val adapter = EliminarAlarmaAdapter()
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
+
     }
+
 }

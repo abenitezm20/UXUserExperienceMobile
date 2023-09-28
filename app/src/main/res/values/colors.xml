@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fondo">#FEFCF5</color>
+    <color name="primario">#453B2B</color>
+    <color name="secundario">#945934</color>
+    <color name="fondoAlarmaCard">#CDA66C</color>
+    <color name="botonDiasOff">#DADAB8</color>
+    <color name="textoError">#CD6E5D</color>
+</resources>

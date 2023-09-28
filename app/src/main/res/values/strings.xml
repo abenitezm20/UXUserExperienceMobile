@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Alarma GPS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activar_gps">Activar GPS</string>
+    <string name="alarma_gps">Alarma GPS</string>
+</resources>
